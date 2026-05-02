@@ -25,7 +25,6 @@
         background: var(--bg) url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50%" font-size="20" fill="%23646464" opacity="0.1">∑🐾</text></svg>') repeat; /* Subtle math symbol and paw print pattern */
     }
 
-        /* NEW: Navigation Bar */
         nav {
             position: sticky;
             top: 0;
@@ -53,7 +52,6 @@
             color: var(--accent);
         }
 
-        /* Tab Logic: Hide all sections by default */
         .tab-content {
             display: none;
             animation: fadeIn 0.4s ease;
@@ -105,7 +103,7 @@
 
     <nav id="main-nav">
         <a onclick="showTab('home')" id="link-home">🏠 Home</a>
-        <a onclick="showTab('about')" id="link-about">🐾 About</a>
+        <a onclick="showTab('about')" id="link-about">🐾 About Me</a>
         <a onclick="showTab('research')" id="link-research">🔬 Research</a>
         <a onclick="showTab('future-plans')" id="link-future-plans">🌱 Future Plans</a>
         <a onclick="showTab('cv')" id="link-cv">📊 CV & Skills</a>
@@ -114,9 +112,10 @@
 
     <div id="home" class="tab-content active">
         <header>
-            <h1>[Your Full Name]</h1>
-            <p style="font-size: 1.2rem; color: var(--text-light);">PhD Applicant & Researcher in [Field]</p>
-            <p>Welcome! I am a researcher focused on [Topic]. Currently exploring [Problem] at [University].</p>
+            <h1>Nathan Carter</h1>
+            <p style="font-size: 1.2rem; color: var(--text-light);">PhD Applicant & Researcher in Statistics and Mathematics</p>
+            <p>Welcome! I am a researcher focused on the intersection between Mathematics and the world of animals. I plan on working in problems in Zoology, Ecology, and Biology as a Mathematician/Statician.
+            I am currently exploring Optimization at James Madison University, where I plan to use this knowledge for my Statistics Ph.D thesis.</p>
             <a href="your-cv-link.pdf" class="cv-button">Download Full CV</a>
         </header>
     </div>
@@ -124,18 +123,48 @@
     <div id="about" class="tab-content">
         <section>
             <h2>About Me</h2>
-            <p>Write a more personal narrative here. How did you get into science? What drives your curiosity?</p>
-            <p>Outside of the lab, I enjoy [Hobby A] and [Hobby B]. I believe in [Value, e.g., open science/mentorship].</p>
+            <p>
+                My journey began in Northern Virginia, though growing up in a military family meant my early years were defined by constant movement across the United States. Throughout these changes, two things remained constant: a profound connection to animals and a fascination with how the world is structured.
+            </p>
+            <p>
+                While I initially expected to become a veterinarian—even shadowing at clinics as a child—my path took a detour through the arts. I spent nine years as a saxophonist, earning various honors and intending to pursue music professionally. However, during my time at <strong>James Madison University</strong>, I discovered a "hidden beauty" in Mathematics and Statistics. My experience in Linear Algebra was a turning point; it transformed math from a subject I simply enjoyed into a lifelong calling.
+            </p>
+            <p>
+                After spending time as a Software and DevOps Engineer, I realized that my true passion lies in the intersection of theory and application. I have since presented research both within and outside of JMU, and I am now dedicated to bridging my two worlds: <strong>Mathematics and Animal Science</strong>. I believe that quantitative rigor can unlock new insights into the biological world I’ve loved since childhood.
+            </p>
+            <p>
+                When I’m not deep in a proof or researching, you can find me tutoring students in music and math, gaming, or spending time with my girlfriend. I am a firm believer in the power of lifelong academia and am always looking for the next complex problem to solve.
+            </p>
+        </section>
+
+        <section id="volunteering">
+            <h3>Community Involvement</h3>
+            <hr>
+            <ul>
+                <li>
+                    <strong>Local Veterinary Clinic</strong> – <em>Veterinary Assistant Volunteer</em><br>
+                    Assisting with animal care and shadowing professionals to better understand the intersection of biology and medicine.
+                </li>
+                <li>
+                    <strong>Music & Math Outreach</strong> – <em>Volunteer Tutor</em><br>
+                    Providing free or low-cost tutoring to students in the community, helping them find the same "hidden beauty" in equations and melodies that I discovered.
+                </li>
+                <li>
+                    <strong>[Insert Organization Name]</strong> – <em>General Volunteer</em><br>
+                    [Brief description of what you do there, e.g., "Helping with local park cleanups and environmental sustainability efforts."]
+                </li>
+            </ul>
         </section>
     </div>
 
     <div id="research" class="tab-content">
         <section>
             <h2>Current Research</h2>
-            <p><strong>[Project Title]</strong><br>Briefly explain the "Why" and the "How."</p>
-            <h2>Publications</h2>
+            <p><strong>Optimization Alogrithms and Theory Labratory</strong><br>Briefly explain the "Why" and the "How."</p>
+            <h2>Past research</h2>
             <ul>
-                <li>Paper Title, Journal 2026.</li>
+                <li>Paper Title, Journal 2026. Presented at:</li>
+                <li>Paper. Presented at: </li>
             </ul>
         </section>
     </div>
