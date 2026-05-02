@@ -57,6 +57,7 @@
             animation: fadeIn 0.4s ease;
         }
 
+        /* Show the active tab */
         .tab-content.active {
             display: block;
         }
@@ -97,21 +98,50 @@
 
         footer { text-align: center; padding: 4rem 0; color: var(--text-light); font-size: 0.85rem; }
 
+        /* Mobile responsiveness for navigation */
         @media (max-width: 768px) {
+            #nav-toggle {
+                display: block;
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                background: var(--primary);
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                cursor: pointer;
+                z-index: 1001;
+                border-radius: 4px;
+                font-size: 1rem;
+            }
             nav {
+                position: fixed;
+                top: 0;
+                left: -250px;
+                width: 250px;
+                height: 100%;
                 flex-direction: column;
-                padding: 0.5rem 0;
-                align-items: center;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(5px);
+                padding: 3rem 1rem 1rem;
+                transition: left 0.3s ease;
+                z-index: 1000;
+                box-shadow: var(--shadow);
+            }
+            nav.open {
+                left: 0;
             }
             nav a {
                 margin: 0.5rem 0;
-                font-size: 0.9rem;
+                font-size: 1rem;
+                display: block;
+                padding: 0.5rem 0;
             }
         }
     </style>
 </head>
 <body>
-
+    <button id="nav-toggle" style="display: none;">☰ Menu</button>
     <nav id="main-nav">
         <a onclick="showTab('home')" id="link-home">🏠 Home</a>
         <a onclick="showTab('about')" id="link-about">🐾 About Me</a>
@@ -225,31 +255,42 @@
         <section>
             <h2>Get In Touch</h2>
             <div class="contact-grid">
-                <p>📧 <strong>Email:</strong> your@email.edu</p>
-                <p>🐦 <strong>Twitter/X:</strong> @YourHandle</p>
-                <p>💼 <strong>LinkedIn:</strong> /in/profile</p>
-                <p>💻 <strong>GitHub:</strong> /username</p>
+                <p>📧 <strong>Email:</strong> carternh@dukes.jmu.edu</p>
+                <p>💼 <strong>LinkedIn:</strong> www.linkedin.com/in/nathanhcarter</p>
+                <p>💻 <strong>GitHub:</strong>github.com/Synitrax</p>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 [Your Name]. Built with simplicity.</p>
+        <p>&copy; 2026 Nathan Carter. Built with simplicity.</p>
     </footer>
 
     <script>
         function showTab(tabId) {
+            // Hide all content
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
 
+            // Remove active class from all links
             const links = document.querySelectorAll('nav a');
             links.forEach(link => link.classList.remove('active'));
 
+            // Show current tab
             document.getElementById(tabId).classList.add('active');
             document.getElementById('link-' + tabId).classList.add('active');
             
+            // Close mobile nav if open
+            document.getElementById('main-nav').classList.remove('open');
+            
+            // Scroll to top
             window.scrollTo(0, 0);
         }
+
+        // Toggle mobile nav
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('open');
+        });
 
         // Initialize first tab
         showTab('home');
