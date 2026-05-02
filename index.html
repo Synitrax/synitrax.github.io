@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[Your Name] | PhD Applicant</title>
     <style>
-        :root {
-            --primary: #2c3e50;
-            --accent: #3498db;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #334155;
-            --text-light: #64748b;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
+    :root {
+        --primary: #228B22; /* Forest green for animals */
+        --accent: #4169E1; /* Royal blue for math */
+        --bg: #F0F8FF; /* Alice blue background */
+        --card-bg: #FFFFFF;
+        --text: #2F4F4F; /* Dark slate gray */
+        --text-light: #708090; /* Slate gray */
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
 
-        body { 
-            font-family: 'Inter', -apple-system, sans-serif; 
-            line-height: 1.7; 
-            color: var(--text); 
-            max-width: 900px; 
-            margin: 0 auto; 
-            padding: 0 1.5rem; 
-            background: var(--bg); 
-        }
+    body { 
+        font-family: 'Inter', -apple-system, sans-serif; 
+        line-height: 1.7; 
+        color: var(--text); 
+        max-width: 900px; 
+        margin: 0 auto; 
+        padding: 0 1.5rem; 
+        background: var(--bg) url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50%" font-size="20" fill="%23646464" opacity="0.1">∑🐾</text></svg>') repeat; /* Subtle math symbol and paw print pattern */
+    }
 
         /* NEW: Navigation Bar */
         nav {
@@ -104,11 +104,12 @@
 <body>
 
     <nav id="main-nav">
-        <a onclick="showTab('home')" id="link-home">Home</a>
-        <a onclick="showTab('about')" id="link-about">About</a>
-        <a onclick="showTab('research')" id="link-research">Research</a>
-        <a onclick="showTab('cv')" id="link-cv">CV & Skills</a>
-        <a onclick="showTab('contact')" id="link-contact">Contact</a>
+        <a onclick="showTab('home')" id="link-home">🏠 Home</a>
+        <a onclick="showTab('about')" id="link-about">🐾 About</a>
+        <a onclick="showTab('research')" id="link-research">🔬 Research</a>
+        <a onclick="showTab('future-plans')" id="link-future-plans">🌱 Future Plans</a>
+        <a onclick="showTab('cv')" id="link-cv">📊 CV & Skills</a>
+        <a onclick="showTab('contact')" id="link-contact">📞 Contact</a>
     </nav>
 
     <div id="home" class="tab-content active">
@@ -136,6 +137,21 @@
             <ul>
                 <li>Paper Title, Journal 2026.</li>
             </ul>
+        </section>
+    </div>
+
+    <div id="future-plans" class="tab-content">
+        <section>
+            <h2>Future Plans: Research in Statistical Ecology/Biology 🐾🔢</h2>
+            <p>I plan to pursue advanced research in statistical ecology and biology, focusing on mathematical models for animal populations and ecosystems. 🌿</p>
+            <p><strong>Key Interests:</strong></p>
+            <ul>
+                <li>Developing probabilistic models for wildlife conservation using Bayesian statistics.</li>
+                <li>Analyzing ecological data with machine learning to predict species interactions (e.g., predator-prey dynamics).</li>
+                <li>Integrating GIS and spatial statistics for habitat modeling.</li>
+                <li>Collaborating on interdisciplinary projects combining math, biology, and environmental science.</li>
+            </ul>
+            <p>These plans align with my passion for using ∑ and π to understand nature's patterns. 🦌➕📈</p>
         </section>
     </div>
 
