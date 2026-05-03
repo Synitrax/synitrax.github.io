@@ -112,12 +112,6 @@
             color: var(--text-light);
             cursor: pointer;
         }
-
-        header img {
-            position: static;
-            display: block;
-            margin: 1rem auto;
-        }
     }
 
     .tab-content { display: none; animation: fadeIn 0.4s ease; }
@@ -127,8 +121,7 @@
         to { opacity: 1; transform: translateY(0); }
     }
 
-    header { text-align: center; margin: 3rem 0; position: relative; }
-    header img { width: 120px; height: 120px; border-radius: 50%; position: absolute; top: 20px; right: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); object-fit: cover; }
+    #home h1 { text-align: center; }
     h1 { font-size: 2.5rem; color: var(--primary); margin: 0; letter-spacing: -0.03em; }
     section {
         background: var(--card-bg);
@@ -182,14 +175,14 @@
         <a onclick="showTab('contact')" id="link-contact">📞 Contact</a>
     </nav>
     <div id="home" class="tab-content active">
-        <header>
+        <section>
+            <img src="images/IMG_7028.jpeg" alt="Nathan Carter" style="width: 120px; height: 120px; border-radius: 50%; float: right; margin-left: 20px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); object-fit: cover;">
             <h1>Nathan Carter</h1>
             <p style="font-size: 1.2rem; color: var(--text-light);">PhD Applicant & Researcher in Statistics and Mathematics</p>
             <p>Welcome! I am a researcher focused on the intersection between Mathematics and the world of animals. I plan on working in problems in Zoology, Ecology, and Biology as a Mathematician/Statician.
             I am currently exploring Optimization at James Madison University, where I plan to use this knowledge for my Statistics Ph.D thesis.</p>
-            <img src="images/IMG_7028.jpeg" alt="Nathan Carter">
             <a href="images/CV.pdf" class="cv-button">Download Full CV</a>
-        </header>
+        </section>
     </div>
 
     <div id="about" class="tab-content">
@@ -236,7 +229,7 @@
                     Volunteered at various events in the local area.
                 </li>
                 <li>
-                    <strong> local food bank</strong> – <em>General Volunteer</em><br>
+                    <strong>Local Food Bank</strong> – <em>General Volunteer</em><br>
                     Helped once a year for several years to help package foods such as rice and beans to be sent to those in need.
                 </li>
                 <li>
@@ -249,12 +242,23 @@
 
     <div id="research" class="tab-content">
         <section>
-            <h2>Current Research</h2>
-            <p><strong>Optimization Alogrithms and Theory Labratory</strong><br>Starting in Summer 2026</p>
-            <h2>Past research</h2>
             <ul>
-                <li> Normal Mixture Density Estimation for Major US Stock: A Four-Year Empirical Study. Presented at: James Madison University and Mathemtical Association of America VA MD DC section</li>
-                <li>A Comprehensive Examination of University-Based Induction Support for Early Career Teachers. Presented at: James Madison University FYRE Symposium</li>
+                <li>
+                    <strong>Normal Mixture Density Estimation for Major US Stock: A Four-Year Empirical Study.</strong>
+                    <ul>
+                        <li style="list-style-type: none; color: #555;">
+                            <em>Presented at: James Madison University and Mathematical Association of America VA MD DC section</em>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>A Comprehensive Examination of University-Based Induction Support for Early Career Teachers.</strong>
+                    <ul>
+                        <li style="list-style-type: none; color: #555;">
+                            <em>Presented at: James Madison University FYRE Symposium</em>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </section>
     </div>
