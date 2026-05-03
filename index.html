@@ -15,13 +15,13 @@
         --shadow: 0 16px 40px -20px rgba(0, 0, 0, 0.2);
     }
 
-    body { 
-        font-family: 'Inter', -apple-system, sans-serif; 
-        line-height: 1.7; 
-        color: var(--text); 
-        max-width: 900px; 
-        margin: 0 auto; 
-        padding: 0 1.5rem; 
+    body {
+        font-family: 'Inter', -apple-system, sans-serif;
+        line-height: 1.7;
+        color: var(--text);
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
         background: linear-gradient(180deg, #f8f2ff 0%, #fff8e8 100%);
         background-attachment: fixed;
         background-image: radial-gradient(circle at 15% 10%, rgba(242, 169, 0, 0.12) 0%, transparent 28%),
@@ -121,7 +121,7 @@
         to { opacity: 1; transform: translateY(0); }
     }
 
-    header { text-align: center; margin: 3rem 0; }
+    header { text-align: center; margin: 3rem 0; position: relative; }
     h1 { font-size: 2.5rem; color: var(--primary); margin: 0; letter-spacing: -0.03em; }
     section {
         background: var(--card-bg);
@@ -179,8 +179,8 @@
             <h1>Nathan Carter</h1>
             <p style="font-size: 1.2rem; color: var(--text-light);">PhD Applicant & Researcher in Statistics and Mathematics</p>
             <p>Welcome! I am a researcher focused on the intersection between Mathematics and the world of animals. I plan on working in problems in Zoology, Ecology, and Biology as a Mathematician/Statician.
-            I am currently exploring Optimization at James Madison University, where I plan to use this knowledge for my Statistics Ph.D thesis.</p>       
-            <img src="images/IMG_7028.jpeg" style="width: 120px; height: 120px; border-radius: 50%; float: right; margin-left: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); object-fit: cover;">         
+            I am currently exploring Optimization at James Madison University, where I plan to use this knowledge for my Statistics Ph.D thesis.</p>
+            <img src="images/IMG_7028.jpeg" style="width: 120px; height: 120px; border-radius: 50%; position: absolute; top: 20px; right: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); object-fit: cover;">
             <a href="images/CV.pdf" class="cv-button">Download Full CV</a>
         </header>
     </div>
@@ -290,7 +290,7 @@
 
             document.getElementById(tabId).classList.add('active');
             document.getElementById('link-' + tabId).classList.add('active');
-            
+
             document.getElementById('main-nav').classList.remove('open');
 
             window.scrollTo(0, 0);
