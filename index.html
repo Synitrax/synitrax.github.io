@@ -135,12 +135,44 @@
     #home h1 { text-align: center; }
     #home header {
         display: flex;
-        align-items: flex-start;
-        gap: 0;
+        flex-direction: row; /* Keep image and text side-by-side */
+        align-items: center;
+        justify-content: center; /* Center the pair in the middle of the page */
+        gap: 25px;
         margin: 3rem 0;
+        text-align: left; /* Keep text left-aligned relative to the image */
     }
-    #home header > div {
-        flex: 1;
+    
+    .header-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* This centers the H1, P, and Button */
+        text-align: center;
+    }
+    
+    .cv-button {
+        background: linear-gradient(135deg, var(--primary), #6f3daf);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 999px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 1.5rem auto 0 auto; /* 'auto' left/right centers it */
+        box-shadow: 0 10px 24px rgba(78, 42, 132, 0.12);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        width: fit-content;
+    }
+    
+    /* Mobile Responsive adjustment */
+    @media (max-width: 768px) {
+        #home header {
+            flex-direction: column; /* Stack image on top of text on small screens */
+            text-align: center;
+        }
+        
+        #home header img {
+            margin-right: 0; /* Remove the desktop margin */
+        }
     }
     h1 { font-size: 2.5rem; color: var(--primary); margin: 0; letter-spacing: -0.03em; }
     section {
@@ -196,12 +228,12 @@
     </nav>
     <div id="home" class="tab-content active">
         <header>
-            <img src="images/IMG_7028.jpeg" alt="Nathan Carter" style="width: 120px; height: 120px; border-radius: 50%; flex-shrink: 0; margin-right: 20px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); object-fit: cover;">
-            <div>
+            <img src="images/IMG_7028.jpeg" alt="Nathan Carter" style="width: 150px; height: 150px; border-radius: 50%; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); object-fit: cover;">
+            
+            <div class="header-text-container">
                 <h1>Nathan Carter</h1>
-                <p style="font-size: 1.2rem; color: var(--text-light);">PhD Applicant & Researcher in Statistics and Mathematics</p>
-                <p>Welcome! I am a researcher focused on the intersection between Mathematics and the world of animals. I plan on working in problems in Zoology, Ecology, and Biology as a Mathematician/Statician.
-                I am currently exploring Optimization at James Madison University, where I plan to use this knowledge for my Statistics Ph.D thesis.</p>
+                <p style="font-size: 1.2rem; color: var(--text-light); margin: 0.5rem 0;">PhD Applicant & Researcher in Statistics and Mathematics</p>
+                <p style="max-width: 500px;">Welcome! I am a researcher focused on the intersection between Mathematics and the world of animals. I plan on working in problems in Zoology, Ecology, and Biology as a Mathematician/Statistician.</p>
                 <a href="images/CV.pdf" class="cv-button">Download Full CV</a>
             </div>
         </header>
