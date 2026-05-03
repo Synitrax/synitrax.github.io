@@ -1,2 +1,2 @@
-# Synitrax.github.io
+#  nathanhcarter.github.io
 Nathan Carter's Website
